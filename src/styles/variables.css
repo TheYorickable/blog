@@ -1,0 +1,12 @@
+:root {
+    --c-bg-color: rgba(255, 255, 255, 0.95);
+    --c-light-grey: rgb(239, 239, 239);
+    --c-light-grey-alt: rgba(50, 50, 150, 0.1);
+    --c-dark-grey: rgba(12, 13, 15, 0.7);
+
+    --c-text-main: rgb(46, 68, 78);
+    --c-text-title: rgb(66, 66, 66);
+    --c-link: rgb(33, 33, 33);
+
+    --c-light-blue: royalblue;
+}
