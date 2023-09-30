@@ -16,7 +16,9 @@ const Header = () => {
     return (
         <header>
             <div className={styles.title}>
-                <h4>Yorick Toma</h4>
+                <h3>
+                    Y<span>orick</span>T<span>oma</span>
+                </h3>
             </div>
             <div className={styles.date}>
                 <span>{toReadableDate(date, true)}</span>

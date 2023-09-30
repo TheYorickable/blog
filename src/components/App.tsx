@@ -1,6 +1,6 @@
 import { Header, PostList } from './index'
 import { BlogPost } from '../types/Blog'
-import './App.css'
+import styles from './App.module.css'
 
 const App = () => {
     const postCollection: BlogPost[] = [
@@ -27,7 +27,7 @@ const App = () => {
     ]
 
     return (
-        <main id="app">
+        <main className={styles.app}>
             <Header />
             <section>
                 <PostList posts={postCollection} />

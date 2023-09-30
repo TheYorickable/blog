@@ -23,7 +23,7 @@ const PostList = (props: Props) => (
                 <p>{post.body}</p>
                 <footer>
                     <a href={post.slug} title={'Read more about ' + post.title}>
-                        Read more
+                        Read more &raquo;
                     </a>
                     <span>{toReadableDate(post.timestamp)}</span>
                 </footer>
