@@ -22,7 +22,6 @@ const Header = () => {
                 className={styles.title}
                 onClick={() => {
                     navigate('/')
-                    console.log('aap')
                 }}
             >
                 <h3>

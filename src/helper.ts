@@ -12,7 +12,7 @@ const postCollection: BlogPost[] = [
         id: 0,
         slug: 'post-one',
         type: 'internal',
-        title: 'Custom dotfile sync across mac devices.',
+        title: 'Custom dotfile sync across devices. update',
         body: 'lorem ipsum enzo',
         timestamp: new Date(
             'Sat Sep 25 2023 01:16:18 GMT+0200 (Central European Summer Time)'
