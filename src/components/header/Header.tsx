@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import toReadableDate from '../../helper'
 import styles from './Header.module.css'
 
-export default function Header() {
+const Header = () => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
@@ -24,3 +24,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

@@ -2,7 +2,7 @@ import { Header, PostList } from './index'
 import { BlogPost } from '../types/Blog'
 import './App.css'
 
-function App() {
+const App = () => {
     const postCollection: BlogPost[] = [
         {
             id: 0,

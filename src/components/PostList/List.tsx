@@ -5,34 +5,31 @@ type Props = {
     posts: BlogPost[]
 }
 
-export default function PostList(props: Props) {
-    return (
-        <div className={styles.postlist}>
-            {props.posts.map((post: BlogPost) => (
-                <article
-                    className={`${styles.article} ${styles[post.type]}`}
-                    key={post.id}
-                >
-                    <h1>
-                        <a href={post.slug} title={post.title}>
-                            {post.title}{' '}
-                            {post.type === 'external' && (
-                                <span className={styles.arrow}>→</span>
-                            )}
-                        </a>
-                    </h1>
-                    <p>{post.body}</p>
-                    <footer>
-                        <a
-                            href={post.slug}
-                            title={'Read more about ' + post.title}
-                        >
-                            Read more
-                        </a>
-                        <span>{toReadableDate(post.timestamp)}</span>
-                    </footer>
-                </article>
-            ))}
-        </div>
-    )
-}
+const PostList = (props: Props) => (
+    <div className={styles.postlist}>
+        {props.posts.map((post: BlogPost) => (
+            <article
+                className={`${styles.article} ${styles[post.type]}`}
+                key={post.id}
+            >
+                <h1>
+                    <a href={post.slug} title={post.title}>
+                        {post.title}{' '}
+                        {post.type === 'external' && (
+                            <span className={styles.arrow}>→</span>
+                        )}
+                    </a>
+                </h1>
+                <p>{post.body}</p>
+                <footer>
+                    <a href={post.slug} title={'Read more about ' + post.title}>
+                        Read more
+                    </a>
+                    <span>{toReadableDate(post.timestamp)}</span>
+                </footer>
+            </article>
+        ))}
+    </div>
+)
+
+export default PostList
