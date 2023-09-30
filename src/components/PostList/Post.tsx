@@ -1,9 +1,4 @@
-import {
-    LoaderFunction,
-    LoaderFunctionArgs,
-    useLoaderData,
-    redirect,
-} from 'react-router-dom'
+import { LoaderFunction, useLoaderData, redirect } from 'react-router-dom'
 import { getPost } from '../../helper'
 
 export const loader: LoaderFunction = async ({ params }) => {
