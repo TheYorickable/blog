@@ -1,4 +1,6 @@
 header {
+    width: 100vw;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     padding: 0 1rem;
@@ -12,12 +14,16 @@ header {
         & h3 span {
             transform: scaleX(1);
             opacity: 1;
-            width: 55px;
+            width: 60px;
+        }
+
+        & .date {
+            opacity: 1;
         }
     }
 
     & h3 {
-        font-weight: 300;
+        font-weight: 500;
         font-size: x-large;
         margin: 1rem 0;
         color: var(--c-text-main);
@@ -37,8 +43,10 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-weight: 300;
+        font-weight: 500;
         color: var(--c-link);
-        font-size: large;
+        opacity: 0.1;
+        font-size: small;
+        transition: opacity 0.2s ease;
     }
 }

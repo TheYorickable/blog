@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
-import toReadableDate from '../../helper'
+import { useNavigate } from 'react-router-dom'
+import { toReadableDate } from '../../helper'
 import styles from './Header.module.css'
 
 const Header = () => {
     const [date, setDate] = useState(new Date())
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const updateTime = setInterval(() => {
@@ -15,7 +18,13 @@ const Header = () => {
 
     return (
         <header>
-            <div className={styles.title}>
+            <div
+                className={styles.title}
+                onClick={() => {
+                    navigate('/')
+                    console.log('aap')
+                }}
+            >
                 <h3>
                     Y<span>orick</span>T<span>oma</span>
                 </h3>

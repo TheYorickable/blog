@@ -1,11 +1,34 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { App } from './components/index'
 import './styles/variables.css'
 import './styles/index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import { App, Post, PostList } from './components/index'
+import { loader as postLoader } from './components/PostList/Post'
+
+import ErrorElement from './components/Error'
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        errorElement: <ErrorElement />,
+
+        children: [
+            {
+                index: true,
+                element: <PostList />,
+                errorElement: <App />,
+            },
+            { path: '/post/:slug', element: <Post />, loader: postLoader },
+        ],
+    },
+])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <RouterProvider router={router} />
     </React.StrictMode>
 )

@@ -24,9 +24,5 @@ body {
 
 #root {
     margin: 0 auto;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-#app {
+    max-width: 800px;
 }
