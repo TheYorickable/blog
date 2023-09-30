@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    border-bottom: 1px solid var(--c-dark-grey);
+}
+
+.title {
+    flex: 1;
+}
+
+.title h4 {
+    font-weight: 300;
+    font-size: x-large;
+    margin: 1rem 0;
+    color: var(--c-text-main);
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 300;
+    color: var(--c-link);
+    font-size: large;
+}

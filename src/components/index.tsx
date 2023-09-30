@@ -1,3 +1,5 @@
 import App from './App'
 import Header from './header/Header'
-export { App, Header }
+import PostList from './PostList/List'
+
+export { App, Header, PostList }

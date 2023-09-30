@@ -1,25 +1,36 @@
-import { Header } from './index'
+import { Header, PostList } from './index'
 import { BlogPost } from '../types/Blog'
 import './App.css'
 
 function App() {
-    const post: BlogPost = {
-        id: 0,
-        title: 'Custom dotfile sync across mac devices.',
-        body: 'lorem ipsum enzo',
-        timestamp: new Date('2023-09-29 23:00:00 GMT+1'),
-    }
+    const postCollection: BlogPost[] = [
+        {
+            id: 0,
+            slug: 'post-one',
+            type: 'internal',
+            title: 'Custom dotfile sync across mac devices.',
+            body: 'lorem ipsum enzo',
+            timestamp: new Date(
+                'Sat Sep 25 2023 01:16:18 GMT+0200 (Central European Summer Time)'
+            ),
+        },
+        {
+            id: 1,
+            slug: 'post-two',
+            type: 'external',
+            title: 'https://www.redblobgames.com/making-of/draggable/',
+            body: 'Many of my interactive pages have a draggable object. I want the reader to move the object around, and I want the diagram to respond in some way. Here Ill document the code I use to make this work with both mouse and touch input, using browser features that are widely supported since 2020. Heres a common case I want to support:',
+            timestamp: new Date(
+                'Sat Sep 24 2023 01:16:18 GMT+0200 (Central European Summer Time)'
+            ),
+        },
+    ]
 
     return (
-        <main>
+        <main id="app">
             <Header />
             <section>
-                <h2>Blog posts</h2>
-                <article>
-                    <h1>{post.title}</h1>
-                    <p>{post.body}</p>
-                    <span>{post.timestamp.toISOString()}</span>
-                </article>
+                <PostList posts={postCollection} />
             </section>
         </main>
     )

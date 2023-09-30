@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import toReadableDate from '../../helper'
+import styles from './Header.module.css'
 
 export default function Header() {
     const [date, setDate] = useState(new Date())
-
-    let dateText = `${date.getMonth()}-${date.getDay()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 
     useEffect(() => {
         const updateTime = setInterval(() => {
@@ -15,7 +15,12 @@ export default function Header() {
 
     return (
         <header>
-            <h4>Yorick Toma</h4> - {dateText}
+            <div className={styles.title}>
+                <h4>Yorick Toma</h4>
+            </div>
+            <div className={styles.date}>
+                <span>{toReadableDate(date, true)}</span>
+            </div>
         </header>
     )
 }
