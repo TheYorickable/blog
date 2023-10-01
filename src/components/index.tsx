@@ -1,7 +1,9 @@
 import App from './App'
 import Header from './Header/Header'
-import Home, { OtherPage } from './Home/Home'
+import Home from './Home/Home'
 import PostList from './PostList/List'
 import Post from './PostList/Post'
 
-export { App, Header, Home, OtherPage, Post, PostList }
+import LinksPage from './ContentPages/LinksPage'
+
+export { App, Header, Home, LinksPage, Post, PostList }

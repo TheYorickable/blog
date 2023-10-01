@@ -1,0 +1,30 @@
+.navlist {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.menuItem {
+    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: scale(1);
+    transform-origin: left;
+    margin: 2rem 0;
+}
+
+.menuItem:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    margin-right: 1rem;
+    transition: margin-right 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuItem:hover .icon {
+    margin-right: 2rem;
+}

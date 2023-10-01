@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { loader as postLoader } from './components/PostList/Post'
-import { App, Home, OtherPage, Post, PostList } from './components/index'
+import { App, Home, LinksPage, Post, PostList } from './components/index'
 
 import ErrorElement from './components/Error'
 
@@ -16,13 +16,8 @@ const Router = createBrowserRouter([
                 errorElement: <ErrorElement />,
             },
             {
-                path: '/other-page',
-                element: <OtherPage />,
-                errorElement: <ErrorElement />,
-            },
-            {
-                path: '/tooling',
-                element: <h1>Tooling</h1>,
+                path: '/links',
+                element: <LinksPage />,
                 errorElement: <ErrorElement />,
             },
             {
