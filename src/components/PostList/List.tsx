@@ -1,10 +1,10 @@
+import { Button } from '@theyorickable/ui-lib'
 import React, { useEffect, useState } from 'react'
 import { Link, generatePath } from 'react-router-dom'
 import BlogAPI from '../../api'
 import { toReadableDate } from '../../helper'
 import { BlogPost } from '../../types/Blog'
 import styles from './List.module.css'
-
 const PostList: React.FC = () => {
     const [data, setData] = useState<BlogPost[]>()
 
@@ -17,7 +17,7 @@ const PostList: React.FC = () => {
         <div className={styles.postlist}>
             {!!data &&
                 data.map((post: BlogPost) => {
-                    const postRoute = generatePath('/post/:slug', {
+                    const postRoute = generatePath('/blog/:slug', {
                         slug: post.slug,
                     })
                     return (
@@ -35,6 +35,7 @@ const PostList: React.FC = () => {
                             </h1>
                             <p>{post.body}</p>
                             <footer>
+                                <Button>Jeaa</Button>
                                 <Link
                                     to={postRoute}
                                     title={'Read more about ' + post.title}
