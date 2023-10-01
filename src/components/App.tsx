@@ -1,9 +1,9 @@
+import React from 'react'
 import { Header } from './index'
 import styles from './App.module.css'
 import { Outlet } from 'react-router-dom'
-import { FC } from 'react'
 
-const App: FC = () => {
+const App: React.FC = () => {
     return (
         <main className={styles.app}>
             <Header />

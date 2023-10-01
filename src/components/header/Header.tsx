@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toReadableDate } from '../../helper'
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header: React.FC = () => {
     const [date, setDate] = useState(new Date())
 
     const navigate = useNavigate()

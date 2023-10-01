@@ -1,3 +1,4 @@
+import React from 'react'
 import { LoaderFunction, useLoaderData, redirect } from 'react-router-dom'
 import { getPost } from '../../helper'
 
@@ -7,10 +8,9 @@ export const loader: LoaderFunction = async ({ params }) => {
     return { post }
 }
 
-const Post = () => {
+const Post: React.FC = () => {
     const { post } = useLoaderData() as any
 
-    console.log()
     return (
         <>
             <h1>{post.title}</h1>

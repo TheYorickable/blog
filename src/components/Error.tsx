@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import React from 'react'
 import { Link, useRouteError } from 'react-router-dom'
 
-const ErrorElement: FC = () => {
+const ErrorElement: React.FC = () => {
     const error = useRouteError()
     console.error(error)
 

@@ -2,10 +2,11 @@ import { BlogPost } from '../../types/Blog'
 import { toReadableDate, getPosts } from '../../helper'
 import styles from './List.module.css'
 import { Link, generatePath } from 'react-router-dom'
+import React from 'react'
 
 const postCollection = getPosts()
 
-const PostList = () => (
+const PostList: React.FC = () => (
     <div className={styles.postlist}>
         {postCollection.map((post: BlogPost) => {
             const postRoute = generatePath('/post/:slug', {
