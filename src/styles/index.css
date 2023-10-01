@@ -23,6 +23,7 @@ body {
 }
 
 #root {
+    flex: 1;
     margin: 0 auto;
     max-width: 800px;
 }

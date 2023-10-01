@@ -1,4 +1,4 @@
-import { Link as UILink } from '@theyorickable/ui-lib'
+import { Container, Link as UILink } from '@theyorickable/ui-lib'
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 
@@ -20,11 +20,13 @@ const MenuItem = ({
 )
 
 const Home = () => (
-    <nav className={styles.navlist}>
-        <MenuItem to="/blog" title="Blog" icon="💭" />
-        <MenuItem to="/other-page" title="Other" icon="🤷‍♂️" />
-        <MenuItem to="/tooling" title="Tooling" icon="🛠️" />
-    </nav>
+    <Container>
+        <nav className={styles.navlist}>
+            <MenuItem to="/blog" title="Blog" icon="💭" />
+            <MenuItem to="/other-page" title="Other" icon="🤷‍♂️" />
+            <MenuItem to="/tooling" title="Tooling" icon="🛠️" />
+        </nav>
+    </Container>
 )
 
 export const OtherPage = () => <h1>Other page</h1>
