@@ -19,9 +19,11 @@ const Header: React.FC = () => {
     return (
         <UIHeader
             navigate={navigate}
-            title="o"
+            title="Yorick Toma"
             time={toReadableDate(date, true)}
-        />
+        >
+            Y<span>orick</span>T<span>oma</span>
+        </UIHeader>
     )
 }
 
