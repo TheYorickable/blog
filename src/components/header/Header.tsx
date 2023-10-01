@@ -1,7 +1,7 @@
+import { Header as UIHeader } from '@theyorickable/ui-lib'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toReadableDate } from '../../helper'
-import styles from './Header.module.css'
 
 const Header: React.FC = () => {
     const [date, setDate] = useState(new Date())
@@ -17,21 +17,11 @@ const Header: React.FC = () => {
     })
 
     return (
-        <header>
-            <div
-                className={styles.title}
-                onClick={() => {
-                    navigate('/')
-                }}
-            >
-                <h3>
-                    Y<span>orick</span>T<span>oma</span>
-                </h3>
-            </div>
-            <div className={styles.date}>
-                <span>{toReadableDate(date, true)}</span>
-            </div>
-        </header>
+        <UIHeader
+            navigate={navigate}
+            title="o"
+            time={toReadableDate(date, true)}
+        />
     )
 }
 
