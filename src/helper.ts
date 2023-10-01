@@ -34,4 +34,4 @@ const getPosts = () => postCollection
 const getPost = (slug: string | undefined) =>
     postCollection.find((post) => post.slug == slug)
 
-export { toReadableDate, getPosts, getPost }
+export { getPost, getPosts, toReadableDate }

@@ -1,10 +1,10 @@
-import './styles/variables.css'
-import './styles/index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { App, Post, PostList } from './components/index'
 import { loader as postLoader } from './components/PostList/Post'
+import './styles/index.css'
+import './styles/variables.css'
 
 import ErrorElement from './components/Error'
 
