@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BlogPost } from '../../types/Blog'
 import { toReadableDate } from '../../helper'
-import { getPosts } from '../../api'
+import BlogAPI from '../../api'
 import styles from './List.module.css'
 import { Link, generatePath } from 'react-router-dom'
 
@@ -9,7 +9,8 @@ const PostList: React.FC = () => {
     const [data, setData] = useState<BlogPost[]>()
 
     useEffect(() => {
-        getPosts().then((data) => setData(data))
+        const blogAPI = new BlogAPI()
+        blogAPI.getPosts().then((data) => setData(data))
     }, [])
 
     return (
