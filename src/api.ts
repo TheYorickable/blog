@@ -4,7 +4,7 @@ import { app } from './config/firebase'
 const db = getDatabase(app)
 const dbRef = ref(db)
 
-export const getPost = async (slug?: string) => {
+export const getPosts = async () => {
     try {
         const snapshot = await get(child(dbRef, `blog`))
         return snapshot.exists() ? snapshot.val() : null

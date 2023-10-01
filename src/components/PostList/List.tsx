@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { BlogPost } from '../../types/Blog'
-import { toReadableDate, getPosts } from '../../helper'
-import { getPost } from '../../api'
+import { toReadableDate } from '../../helper'
+import { getPosts } from '../../api'
 import styles from './List.module.css'
 import { Link, generatePath } from 'react-router-dom'
-
-const postCollection = getPosts()
 
 const PostList: React.FC = () => {
     const [data, setData] = useState<BlogPost[]>()
 
     useEffect(() => {
-        getPost().then((data) => setData(data))
+        getPosts().then((data) => setData(data))
     }, [])
 
     return (
