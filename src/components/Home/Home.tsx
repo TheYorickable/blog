@@ -17,16 +17,19 @@ const NavigationLinks: MenuItemInterface[] = [
         title: 'Github',
         icon: '🚀',
         to: 'https://github.com/theyorickable',
+        external: true,
     },
     {
         title: 'Instagram',
         icon: '📸',
         to: 'https://instagram.com/theyorickable',
+        external: true,
     },
     {
         title: 'LinkedIn',
         icon: '👨‍💻',
         to: 'https://linkedin.com/yoricktoma',
+        external: true,
     },
 ]
 

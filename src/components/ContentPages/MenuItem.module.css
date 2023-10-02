@@ -26,3 +26,13 @@
 .menuItem:hover .icon {
     margin-right: 2rem;
 }
+
+.navlist li:hover .external {
+    margin-left: 1.2rem;
+    opacity: 1;
+}
+.external {
+    margin-left: 1rem;
+    opacity: 0.05;
+    transition: all 0.2s ease;
+}
