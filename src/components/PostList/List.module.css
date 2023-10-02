@@ -4,7 +4,7 @@
     gap: 1rem;
 
     .article {
-        border-bottom: 1px solid var(--c-light-grey);
+        border-bottom: 1px solid var(--c-accent);
         box-sizing: border-box;
         gap: 1rem;
         padding: 1rem;
@@ -12,12 +12,6 @@
         &:last-of-type {
             border-bottom: 0px;
         }
-
-        &:hover {
-            background: var(--c-light-grey-alt);
-            transition: backgroundColor 0.2s ease;
-        }
-
         .arrow {
             font-size: small;
             margin-left: 0.5rem;
@@ -26,7 +20,7 @@
         }
 
         & a {
-            color: var(--c-title);
+            color: var(--c-text-primary);
             font-weight: 500;
             text-decoration: none;
         }
@@ -36,7 +30,7 @@
         }
 
         & p {
-            color: var(--c-text-main);
+            color: var(--c-text-primary);
             font-size: small;
         }
 
@@ -46,6 +40,20 @@
 
             & a {
                 flex: 1;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .postlist {
+        .article {
+            & a {
+                color: var(--c-dark-text-primary);
+            }
+
+            & p {
+                color: var(--c-dark-text-primary);
             }
         }
     }

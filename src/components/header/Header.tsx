@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             title="Yorick Toma"
             time={toReadableDate(date, true)}
         >
-            Y<span>orick</span>T<span>oma</span>
+            Y<span>orick&nbsp;</span>T<span>oma</span>
         </UIHeader>
     )
 }

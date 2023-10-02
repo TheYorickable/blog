@@ -10,7 +10,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 const Post: React.FC = () => {
     const { post } = useLoaderData() as any
-    console.log('joe')
+    console.log(post)
     return (
         <>
             <h1>{post.title}</h1>

@@ -5,6 +5,7 @@ import BlogAPI from '../../api'
 import { toReadableDate } from '../../helper'
 import { BlogPost } from '../../types/Blog'
 import styles from './List.module.css'
+
 const PostList: React.FC = () => {
     const [data, setData] = useState<BlogPost[]>()
 
@@ -27,15 +28,11 @@ const PostList: React.FC = () => {
                         >
                             <h1>
                                 <Link to={postRoute} title={post.title}>
-                                    {post.title}{' '}
-                                    {post.type === 'external' && (
-                                        <span className={styles.arrow}>→</span>
-                                    )}
+                                    {post.title}
                                 </Link>
                             </h1>
                             <p>{post.body}</p>
                             <footer>
-                                <Button>Jeaa</Button>
                                 <Link
                                     to={postRoute}
                                     title={'Read more about ' + post.title}
