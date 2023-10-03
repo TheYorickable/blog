@@ -1,7 +1,17 @@
 {
-  "name": "web",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+    "name": "web",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TheYorickable/blog.git"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "start:app": "yarn workspace app start",
+        "start:ui-lib": "yarn workspace ui-lib start",
+        "deploy:app": "yarn workspace app deploy",
+        "deploy:open": "yarn workspace app deploy-open"
+    }
 }
