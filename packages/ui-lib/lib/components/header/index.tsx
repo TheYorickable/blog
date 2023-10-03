@@ -4,7 +4,7 @@ import { Title } from '../typo/title'
 import styles from './styles.module.css'
 
 interface HeaderProps {
-    navigate: NavigateFunction
+    navigate?: NavigateFunction
     children?: React.ReactNode
     title: string
     time: string
@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
             className={`${styles.header} ${className}`}
             {...restProps}
             onClick={() => {
-                navigate('/')
+                navigate && navigate('/')
             }}
         >
             <div className={styles.title}>

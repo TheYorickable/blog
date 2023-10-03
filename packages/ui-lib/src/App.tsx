@@ -20,7 +20,6 @@ function App() {
         <>
             <Example title={'Header'}>
                 <Header
-                    navigate={'/'}
                     title="Yorick Toma"
                     time={new Date().toLocaleDateString()}
                 >
