@@ -1,4 +1,4 @@
-import { Header as UIHeader } from '@theyorickable/ui-lib'
+import { Header as UIHeader } from 'ui-lib'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toReadableDate } from '../../helper'

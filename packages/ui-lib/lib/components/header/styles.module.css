@@ -1,0 +1,61 @@
+.header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    border-bottom: 2px solid var(--c-accent);
+    background: var(--c-bg-primary);
+
+    .title {
+        flex: 1;
+    }
+
+    &:hover {
+        & :is(h1, h2, h3, h4, h5, h6) span {
+            opacity: 1;
+            max-width: 100px;
+        }
+
+        & .date {
+            opacity: 1;
+            color: var(--c-accent);
+        }
+    }
+
+    & :is(h1, h2, h3, h4, h5, h6) {
+        margin: 1rem 0;
+        color: var(--c-text-primary);
+
+        > span {
+            display: inline-block;
+            opacity: 0;
+            max-width: 0px;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+
+    .date {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 500;
+        color: var(-c-text-secondary);
+        font-size: small;
+        opacity: 0.25;
+        transition: opacity 0.2s ease, color 0.2s ease;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .header {
+        background-color: var(--c-dark-bg-dark);
+
+        & :is(h1, h2, h3, h4, h5, h6) {
+            color: var(--c-dark-text-primary);
+        }
+    }
+
+    .date {
+        color: var(--c-dark-text-secondary);
+    }
+}

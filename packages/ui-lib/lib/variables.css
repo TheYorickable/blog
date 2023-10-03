@@ -1,0 +1,37 @@
+:root {
+    --c-dark-bg-dark: rgba(38, 34, 43, 1);
+    --c-dark-bg-darker: rgba(31, 28, 37, 1);
+    --c-dark-bg-darkest: rgba(28, 28, 28, 1);
+
+    --c-dark-bg-light: rgba(62, 61, 62, 1);
+
+    --c-dark-text-primary: rgba(215, 215, 215, 1);
+    --c-dark-text-secondary: rgba(150, 150, 150, 1);
+
+    --c-light-bg-light: rgba(228, 226, 231, 1);
+    --c-light-bg-lighter: rgba(255, 255, 255, 1);
+    --c-light-bg-lightest: var(--c-light-bg-lighter);
+
+    --c-light-bg-dark: rgba(215, 215, 215, 1);
+
+    --c-light-text-primary: rgba(61, 61, 61, 1);
+    --c-light-secondary: rgba(108, 108, 108, 1);
+
+    /* --c-accent: rgba(93, 223, 191, 1); */
+    /* --c-accent: rgba(176, 79, 228, 1); */
+    --c-accent: rgba(67, 134, 178, 1);
+
+    --c-bg-primary: var(--c-light-bg-light);
+    --c-bg-secondary: var(--c-light-bg-lighter);
+
+    --c-bg-dark: var(--c-light-bg-dark);
+
+    --c-text-primary: var(--c-light-text-primary);
+    --c-text-secondary: var(--c-light-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--c-dark-bg-dark);
+    }
+}
