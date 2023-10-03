@@ -11,6 +11,7 @@
     "scripts": {
         "start:app": "yarn workspace app start",
         "start:ui-lib": "yarn workspace ui-lib start",
+        "start:dev-ui": "yarn workspace ui-lib dev-ui",
         "deploy:app": "yarn workspace app deploy",
         "deploy:open": "yarn workspace app deploy-open"
     }
