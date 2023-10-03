@@ -1,4 +1,4 @@
-import { Title, Link as UILink } from '@theyorickable/ui-lib'
+import { Title, Link as UILink } from 'ui-lib'
 import { Link } from 'react-router-dom'
 import styles from './MenuItem.module.css'
 

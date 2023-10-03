@@ -1,39 +1,18 @@
 {
-    "name": "@theyorickable/blog",
+    "name": "web",
     "private": true,
-    "version": "0.0.1",
-    "type": "module",
-    "homepage": "http://164.90.192.147/",
     "repository": {
         "type": "git",
         "url": "https://github.com/TheYorickable/blog.git"
     },
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview",
-        "deploy:open": "npm run deploy:prod && npm run open-live",
-        "deploy:prod": "npm run build && scp -r dist/** root@do-yoricktoma:/var/www/html",
-        "open-live": "open http://164.90.192.147/"
-    },
-    "dependencies": {
-        "@theyorickable/ui-lib": "file:../ui-lib",
-        "firebase": "^10.4.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.16.0"
-    },
-    "devDependencies": {
-        "@types/react": "^18.2.18",
-        "@types/react-dom": "^18.2.7",
-        "@typescript-eslint/eslint-plugin": "^6.2.1",
-        "@typescript-eslint/parser": "^6.2.1",
-        "@vitejs/plugin-react": "^4.0.4",
-        "eslint": "^8.46.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.3",
-        "typescript": "^5.0.2",
-        "vite": "^4.4.8"
+        "start:app": "yarn workspace app start",
+        "start:ui-lib": "yarn workspace ui-lib start",
+        "start:dev-ui": "yarn workspace ui-lib dev-ui",
+        "deploy:app": "yarn workspace app deploy",
+        "deploy:open": "yarn workspace app deploy-open"
     }
 }

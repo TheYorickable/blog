@@ -1,0 +1,30 @@
+.title {
+    color: var(--c-text-primary);
+    margin: 1rem 0;
+
+    &:is(h1) {
+        font-size: xx-large;
+        margin: 1.6rem 0;
+    }
+    &:is(h2) {
+        font-size: x-large;
+    }
+    &:is(h3) {
+        font-size: large;
+    }
+    &:is(h4) {
+        font-size: medium;
+    }
+    &:is(h5) {
+        font-size: small;
+    }
+    &:is(h6) {
+        font-size: smaller;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: var(--c-dark-text-primary);
+    }
+}

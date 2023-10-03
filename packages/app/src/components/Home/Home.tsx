@@ -1,4 +1,4 @@
-import { Container } from '@theyorickable/ui-lib'
+import { Container } from 'ui-lib'
 import { MenuList } from '../ContentPages/MenuItem'
 import { MenuItemInterface } from './../ContentPages/MenuItem'
 

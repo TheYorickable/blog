@@ -1,0 +1,10 @@
+.container {
+    padding: 0 1rem;
+    background-color: var(--c-bg-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        background-color: var(--c-dark-bg-darker);
+    }
+}

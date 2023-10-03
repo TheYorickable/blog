@@ -1,4 +1,4 @@
-import { Container } from '@theyorickable/ui-lib'
+import { Container } from 'ui-lib'
 import React from 'react'
 import { MenuItemInterface, MenuList } from './MenuItem'
 
