@@ -2,7 +2,6 @@
     "name": "app",
     "private": true,
     "version": "0.0.1",
-    "type": "module",
     "homepage": "http://164.90.192.147/",
     "repository": {
         "type": "git",
