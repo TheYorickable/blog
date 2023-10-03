@@ -14,7 +14,7 @@
         "deploy-open": "npm run deploy && npm run open-live"
     },
     "dependencies": {
-        "ui-lib": "5.0.0",
+        "ui-lib": "file:../ui-lib/",
         "firebase": "^10.4.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
