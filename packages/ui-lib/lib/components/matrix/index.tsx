@@ -12,17 +12,18 @@ export const Matrix: React.FC = () => {
     })
 
     useEffect(() => {
-        const w = containerRef.current.offsetWidth
-        const h = containerRef.current.offsetHeight
+        const w = Math.floor(containerRef.current.offsetWidth / 10) * 10
+        const h = Math.floor(containerRef.current.offsetHeight / 10) * 10
 
+        console.log()
         setContainerState({
             width: w,
             height: h,
         })
 
-        setTotalPixels(
-            ((containerState.width / dotSize) * containerState.height) / dotSize
-        )
+        console.log(w / dotSize)
+
+        setTotalPixels(((w / dotSize) * h) / dotSize)
     }, [])
 
     return (
