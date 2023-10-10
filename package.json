@@ -6,8 +6,8 @@
         "url": "https://github.com/TheYorickable/web.git"
     },
     "scripts": {
-        "start:app": "cd packages/app && pnpm run start",
-        "start:ui-lib": "cd packages/ui-lib && pnpm run start",
+        "start:dev-app": "cd packages/app && pnpm run start",
+        "start:ui": "cd packages/ui-lib && pnpm run start",
         "start:dev-ui": "cd packages/ui-lib && pnpm run dev-ui",
         "deploy:app": "cd packages/app && pnpm run deploy",
         "deploy:open": "cd packages/app && pnpm run deploy-open"

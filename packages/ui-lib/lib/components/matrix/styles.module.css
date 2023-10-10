@@ -1,6 +1,6 @@
 .gridContainer {
-    width: 525px;
-    height: 150px;
+    width: 800px;
+    height: 200px;
     display: flex;
     box-sizing: border-box;
     font-size: 0px;
@@ -26,4 +26,28 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+.black {
+}
+
+.white {
+    & span {
+        background-color: white;
+        animation: 2s linear 0s infinite alternate pulse;
+        transition: all 0.2s ease;
+    }
+}
+
+@keyframes pulse {
+    from {
+        background-color: black;
+        box-shadow: 0 1px 1px rgba(50, 145, 255, 0.1),
+            0 0 2px 1px rgba(50, 145, 255, 0.15);
+    }
+    to {
+        background-color: white;
+        box-shadow: 0 1px 1px rgba(50, 145, 255, 0.8),
+            0 0 2px 1px rgba(50, 145, 255, 0.25);
+    }
 }
